@@ -1,5 +1,9 @@
-const login = () => {
-    
+const login = (event) => {
+    event.preventDefault()
+
+    /* errorLogin() */
+    /* sucessLogin(); */
+
     let login = document.querySelector('input[type="text"]');
     let password = document.querySelector('input[type="password"]');
 
@@ -8,6 +12,7 @@ const login = () => {
 
     fetch('https://johann.reader.homologacao.inovamobil.com.br/api/login', {
         method: 'POST',
+        mode: 'cors',
         headers: {
             'accept': '*/*',
             'Content-Type' : 'application/json-patch+json'
@@ -27,10 +32,19 @@ const login = () => {
 }
 
 const sucessLogin = () => {
-    console.log('foi')
+    document.querySelector('.loginError').classList.remove('visible');
     window.location.replace("./products.html");
 }
 
 const errorLogin = () => {
-    console.log('deu ruim')
+    document.querySelector('.loginError').classList.add('visible');
+    botaoLogin.textContent = "Entrar";
+}
+
+const onLoadProducts = () => {
+    loadTable()
+}
+
+const loadTable = () => {
+
 }

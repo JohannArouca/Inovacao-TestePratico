@@ -13,16 +13,23 @@ body {
     align-items: center;
 }
 
-.loginContainer {
-    min-height: 330px;
-    width: 350px;
+.container {
     background-color: white;
     box-sizing: border-box;
     padding: 30px;
     border-radius: 20px;
+}
+
+.loginContainer {
+    min-height: 330px;
+    width: 350px;
     flex-direction: column;
     align-items: center;
     display: flex;
+}
+
+.productsContainer {
+    
 }
 
 .loginTitle {
@@ -59,6 +66,28 @@ body {
     color: red;
     font-weight: bold;
     margin-bottom: 15px;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.button {
+    outline: none;
+    background: #004581;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    height: 40px;
+    width: 100%;
+}
+
+.button:hover {
+    background: #02187a;
 }
 
 .loginButton {
@@ -77,6 +106,69 @@ body {
     margin-bottom: 20px;
 }
 
-.button:hover {
-    background: #02187a;
+.addButtonContainer {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 15px;
+}
+
+.addButton {
+    width: 100px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+.filterButton {
+    width: 100px;
+}
+
+.tableProducts {
+    width: 100%;
+}
+
+.tableProducts thead tr {
+    background-color: #004581;
+    color: #ffffff;
+    text-align: left;
+}
+
+.tableProducts th, .tableProducts td {
+    padding: 8px 15px;
+}
+
+.tableProducts tbody {
+    background-color: #EDEDED;
+}
+
+.actionButton {
+    background-color: #004581;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="./script.js"></script>
+        <title>Teste Prático | Produtos</title>
+    </head>
+    <body onload="onLoadProducts()">
+        <main class="background">
+            <div class="container productsContainer">
+                <h1 class="productsTitle">Produtos</h1>
+                <div class="addButtonContainer">
+                    <button class="button addButton">
+                        <i class="fa fa-plus"></i>
+                        Cadastrar
+                    </button>
+                </div>
+                <div class="filters">
+                    <div class="filter">
+                        <span>Código de barras</span>
+                        <input type="number" name="" id="">
+                    </div>
+                    <div class="filter">
+                        <span>Nome</span>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="filter">
+                        <span>Preço</span>
+                        <input type="number" name="" id="">
+                    </div>
+                    <button class="button filterButton">
+                        <i class="fa fa-filter"></i>
+                        Filtrar
+                    </button>
+                </div>
+                <table class="tableProducts">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Código de barras</th>
+                        <th>Imagem</th>
+                        <th>Ações</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produto 1</td>
+                            <td>R$50,00</td>
+                            <td>1232132131231231</td>
+                            <td>image</td> 
+                            <td>
+                                <button class="actionButton">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="actionButton">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                                <button class="actionButton">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Produto 1</td>
+                            <td>R$50,00</td>
+                            <td>1232132131231231</td>
+                            <td>image</td> 
+                            <td>
+                                <button class="actionButton">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                                <button class="actionButton">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                                <button class="actionButton">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

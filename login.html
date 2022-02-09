@@ -8,13 +8,13 @@
     </head>
     <body>
         <main class="background">
-            <div class="loginContainer">
+            <div class="container loginContainer">
                 <h1 class="loginTitle">Entre com seu usuário</h1>
                 <form class="loginForm">
                     <input class="loginInput" type="text" placeholder="Login">
                     <input class="loginInput" type="password" placeholder="Senha">
-                    <text class="loginError"></text>
-                    <button class="loginButton" onclick="login(); return false">Entrar</button>
+                    <text class="loginError">Login ou senha inválido(s)!</text>
+                    <button class="button loginButton" onclick="login(event); return false">Entrar</button>
                 </form>
             </div>
         </main>
