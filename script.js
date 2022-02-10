@@ -1,18 +1,16 @@
+let acessToken = 'teste'
+let expirationToken = 'teste2' 
+
+/* Função do onClick do botão de login */
 const login = (event) => {
     event.preventDefault()
-
-    /* errorLogin() */
-    /* sucessLogin(); */
 
     let login = document.querySelector('input[type="text"]');
     let password = document.querySelector('input[type="password"]');
 
-    console.log(login.value)
-    console.log(password.value)
-
+    /* Requisição na API */
     fetch('https://johann.reader.homologacao.inovamobil.com.br/api/login', {
         method: 'POST',
-        mode: 'cors',
         headers: {
             'accept': '*/*',
             'Content-Type' : 'application/json-patch+json'
@@ -25,26 +23,47 @@ const login = (event) => {
         if (response.status !== 200) {
             return errorLogin();
         }
-        sucessLogin();
+        sucessLogin(response);
     }).catch(() => {
         errorLogin();
     })
 }
 
-const sucessLogin = () => {
+/* Função chamada quando o login é bem sucedido */
+const sucessLogin = (response) => {
     document.querySelector('.loginError').classList.remove('visible');
-    window.location.replace("./products.html");
+    
+    response.json()
+    .then((data) => {
+        acessToken = data.accessToken
+        expirationToken = data.expiration
+    })
+    
+    window.location.replace("./products.html")
 }
 
+/* Função chamada quando o login dá errado */
 const errorLogin = () => {
+    /* Adiciona a mensagem de erro de login a classe visible que, por CSS, o deixará visível */
     document.querySelector('.loginError').classList.add('visible');
-    botaoLogin.textContent = "Entrar";
 }
 
+/* Função chamada quando a página de produtos é carregada */
 const onLoadProducts = () => {
+    console.log(acessToken)
+    console.log(expirationToken)
     loadTable()
 }
 
+/* Função que carrega a tabela de produtos */
 const loadTable = () => {
+    
+}
 
+/* Função do onClick do botão sair */
+const leave = () => {
+    acessToken = ''
+    expirationToken = ''
+    
+    window.location.replace("./login.html")
 }

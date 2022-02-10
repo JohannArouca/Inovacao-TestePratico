@@ -106,6 +106,18 @@ body {
     margin-bottom: 20px;
 }
 
+.leaveButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .addButtonContainer {
     display: flex;
     justify-content: end;
