@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 /* Objeto que controla o token e o expiration */
 let token = {
     accessToken: '',
     expirationToken: new Date()
 }
+=======
+let acessToken = 'teste'
+let expirationToken = 'teste2' 
+>>>>>>> dc9eb12950804870ecd555f9e5f2fe0d25537a55
 
 /* Função do onClick do botão de login */
 const login = (event) => {
@@ -26,6 +31,7 @@ const login = (event) => {
         if (response.status !== 200) {
             return errorLogin();
         }
+<<<<<<< HEAD
         response.json()
             .then((data) => {
                 console.log(data)
@@ -40,11 +46,30 @@ const login = (event) => {
                     errorLogin()
                 }
             })
+=======
+        sucessLogin(response);
+>>>>>>> dc9eb12950804870ecd555f9e5f2fe0d25537a55
     }).catch(() => {
         errorLogin()
     })
 }
 
+<<<<<<< HEAD
+=======
+/* Função chamada quando o login é bem sucedido */
+const sucessLogin = (response) => {
+    document.querySelector('.loginError').classList.remove('visible');
+    
+    response.json()
+    .then((data) => {
+        acessToken = data.accessToken
+        expirationToken = data.expiration
+    })
+    
+    window.location.replace("./products.html")
+}
+
+>>>>>>> dc9eb12950804870ecd555f9e5f2fe0d25537a55
 /* Função chamada quando o login dá errado */
 const errorLogin = () => {
     /* Adiciona a mensagem de erro de login a classe visible que, por CSS, o deixará visível */
@@ -53,11 +78,14 @@ const errorLogin = () => {
 
 /* Função chamada quando a página de produtos é carregada */
 const onLoadProducts = () => {
+    console.log(acessToken)
+    console.log(expirationToken)
     loadTable()
 }
 
 /* Função que carrega a tabela de produtos */
 const loadTable = () => {
+<<<<<<< HEAD
     /* Requisição na API pegando todos os produtos */
     fetch('https://johann.reader.homologacao.inovamobil.com.br/api/produtos', {
         method: 'GET',
@@ -107,5 +135,15 @@ const leave = () => {
     localStorage.setItem(token.accessToken, '')
     /* localStorage.setItem(expirationToken, new Date()) */
 
+=======
+    
+}
+
+/* Função do onClick do botão sair */
+const leave = () => {
+    acessToken = ''
+    expirationToken = ''
+    
+>>>>>>> dc9eb12950804870ecd555f9e5f2fe0d25537a55
     window.location.replace("./login.html")
 }
