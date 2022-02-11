@@ -98,7 +98,7 @@ const loadTable = () => {
 /* Função que cria os botões de ação da tabela */
 const actionButtons = (gtin) => {
     return (
-        `aee ${gtin}`
+        `${gtin}`
     )
 }
 
