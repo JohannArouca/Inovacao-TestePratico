@@ -175,6 +175,10 @@ input[type=number] {
     background-color: #EDEDED;
 }
 
+.tableProducts .tableImage {
+    width: 40px;
+}
+
 .actionButton {
     background-color: #004581;
     color: white;
@@ -183,4 +187,44 @@ input[type=number] {
     height: 30px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    margin: 10px;
+}
+
+.editInputs {
+    display: flex;
+    flex-direction: row;
+}
+
+.editInput {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.editButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.editButtons .cancelButton {
+    background-color: #b8b8b8;
+    color: black;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.editButtons .cancelButton:hover {
+    background-color: #9c9c9c;
+}
+
+.editButtons .saveButton {
+    width: 100px;
 }

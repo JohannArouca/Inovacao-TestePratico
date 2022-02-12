@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="./script.js"></script>
+    <title>Teste Prático | Produtos</title>
+</head>
+
+<body onload="onLoadEdit()">
+    <main class="background">
+        <button class="leaveButton" onclick="leave()">
+            Sair
+            <i class="fa fa-arrow-right"></i>
+        </button>
+        <div class="container productsContainer">
+            <h1 class="editTitle" id="editTitle">Novo Produto</h1>
+            <div class="editInputs">
+                <div class="column">
+                    <span>Imagem</span>
+                    <input class="editInput" type="file" name="" id="">
+                    <img class='imgEdit' id='imgEdit'></img>
+                </div>
+                <div class="column">
+                    <span>Código de barras</span>
+                    <input class="editInput" id="gtinEdit" type="number" name="" id="">
+                    
+                    <span>Nome</span>
+                    <input class="editInput" id="nameEdit" type="text" name="" id="">
+                    
+                    <span>Preço</span>
+                    <input class="editInput" id="priceEdit" type="number" name="" id="">
+                </div>
+            </div>
+            <div class="editButtons">
+                <button class="button cancelButton" onclick="cancelEdit()">
+                    Cancelar
+                </button>
+                <button class="button saveButton" onclick="saveProduct()">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

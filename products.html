@@ -10,18 +10,13 @@
     <body onload="onLoadProducts()">
         <main class="background">
             <button class="leaveButton" onclick="leave()">
-<<<<<<< HEAD
                 Sair
                 <i class="fa fa-arrow-right"></i>
-=======
-                <i class="fa fa-arrow-left"></i>
-                Sair
->>>>>>> dc9eb12950804870ecd555f9e5f2fe0d25537a55
             </button>
             <div class="container productsContainer">
                 <h1 class="productsTitle">Produtos</h1>
                 <div class="addButtonContainer">
-                    <button class="button addButton">
+                    <button class="button addButton" onclick="addProduct()">
                         <i class="fa fa-plus"></i>
                         Cadastrar
                     </button>
@@ -53,23 +48,7 @@
                         <th>Ações</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Produto 1</td>
-                            <td>R$50,00</td>
-                            <td>1232132131231231</td>
-                            <td>image</td> 
-                            <td>
-                                <button class="actionButton" title="Visualizar" onclick="viewProduct(gtin)">
-                                    <i class="fa fa-eye"></i>
-                                </button>
-                                <button class="actionButton" title="Editar" onclick="editProduct(gtin)">
-                                    <i class="fa fa-pencil"></i>
-                                </button>
-                                <button class="actionButton" title="Deletar" onclick="deleteProduct(gtin)">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
