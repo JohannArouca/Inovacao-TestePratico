@@ -9,7 +9,7 @@
     <title>Teste Prático | Produtos</title>
 </head>
 
-<body onload="onLoadEdit()">
+<body onload="onLoadView()">
     <main class="background">
         <button class="leaveButton" onclick="leave()">
             Sair
@@ -17,29 +17,25 @@
         </button>
         <div class="container productsContainer">
             <h1 class="viewTitle">Produto</h1>
-            <div class="editInputs">
+            <div class="viewArea">
                 <div class="column">
-                    <span>Imagem</span>
-                    <input class="editInput" type="file" name="" id="">
-                    <img class='imgEdit' id='imgEdit'></img>
+                    <span class="viewTextTitle">Imagem</span>
+                    <img class='imgView' id='imgView'></img>
                 </div>
                 <div class="column">
-                    <span>Código de barras</span>
-                    <input class="editInput" id="gtinEdit" type="number" name="" id="">
+                    <span class="viewTextTitle">Código de barras</span>
+                    <span class="viewText gtinView" id="gtinView"></span>
                     
-                    <span>Nome</span>
-                    <input class="editInput" id="nameEdit" type="text" name="" id="">
+                    <span class="viewTextTitle">Nome</span>
+                    <span class="viewText nameView" id="nameView"></span>
                     
-                    <span>Preço</span>
-                    <input class="editInput" id="priceEdit" type="number" name="" id="">
+                    <span class="viewTextTitle">Preço</span>
+                    <span class="viewText priceView" id="priceView"></span>
                 </div>
             </div>
             <div class="editButtons">
-                <button class="button cancelButton" onclick="cancelEdit()">
-                    Cancelar
-                </button>
-                <button class="button saveButton" onclick="saveProduct()">
-                    Salvar
+                <button class="button saveButton" onclick="backProducts()">
+                    Voltar
                 </button>
             </div>
         </div>

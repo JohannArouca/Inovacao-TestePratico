@@ -197,7 +197,7 @@ input[type=number] {
     margin: 10px;
 }
 
-.editInputs {
+.editInputs, .viewArea {
     display: flex;
     flex-direction: row;
 }
@@ -227,4 +227,18 @@ input[type=number] {
 
 .editButtons .saveButton {
     width: 100px;
+}
+
+.imgView, .imgEdit {
+    width: 200px;
+    margin-top: 8px;
+}
+
+.viewTextTitle, .editTextTitle {
+    font-weight: bold;
+}
+
+.viewText {
+    margin-top: 8px;
+    margin-bottom: 20px;
 }
