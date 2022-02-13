@@ -23,29 +23,19 @@
                 </div>
                 <div class="filters">
                     <div class="filter">
-                        <span>Código de barras</span>
-                        <input type="number" name="" id="">
+                        <span>Filtrar</span>
+                        <input type="text" name="" id="filterInput" onkeyup="filterProducts()">
                     </div>
-                    <div class="filter">
-                        <span>Nome</span>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div class="filter">
-                        <span>Preço</span>
-                        <input type="number" name="" id="">
-                    </div>
-                    <button class="button filterButton">
-                        <i class="fa fa-filter"></i>
-                        Filtrar
-                    </button>
                 </div>
-                <table class="tableProducts">
+                <table class="tableProducts" id="tableProducts">
                     <thead>
-                        <th>Código de barras</th>
-                        <th>Nome</th>
-                        <th>Preço</th>
-                        <th>Imagem</th>
-                        <th>Ações</th>
+                        <tr id="tableHeader">
+                            <th>Código de barras</th>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Imagem</th>
+                            <th>Ações</th>
+                        </tr>
                     </thead>
                     <tbody>
                         

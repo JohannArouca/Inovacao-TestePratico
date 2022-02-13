@@ -13,11 +13,31 @@ body {
     align-items: center;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background: white; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #004581; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #02187a; 
+}
+
 .container {
     background-color: white;
     box-sizing: border-box;
+    max-height: 85%;
     padding: 30px;
     border-radius: 20px;
+    margin-top: 35px;
 }
 
 .loginContainer {
@@ -26,10 +46,6 @@ body {
     flex-direction: column;
     align-items: center;
     display: flex;
-}
-
-.productsContainer {
-    
 }
 
 .loginTitle {
@@ -118,6 +134,12 @@ body {
     cursor: pointer;
 }
 
+.productsContainer {
+    border-radius: 20px 0 0 0;
+    overflow: scroll;
+    min-width: 650px;
+}
+
 .addButtonContainer {
     display: flex;
     justify-content: end;
@@ -132,7 +154,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: end;
     margin-bottom: 30px;
 }
 
@@ -141,7 +163,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-right: 20px;
 }
 
 input[type=number]::-webkit-inner-spin-button { 
